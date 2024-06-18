@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda de Guerra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 1rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2rem;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(103, 101, 101, 0.367);
+        }
+
+    </style>
+</head>
+<body>
+    <style>
+        #popup {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: left 0.3s;
+            z-index: 1000;
+        }
+        #toggleButton {
+            position: fixed;
+            top: 20px; /* Ajusta la distancia desde la parte superior */
+            left: 20px; /* Ajusta la distancia desde la parte izquierda */
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" onclick="togglePopup()">☰</button>
+    <div id="popup">
+        <!-- Contenido del popup -->
+        <h2>Complementos</h2>
+        <ul>
+            <li><section id="contact">
+                <h2>Manual 1999</h2>
+                <em><p>Mirelo Aqui<Center><a href="https://www.cobat.edu.mx/wp-content/uploads/sites/79/2011/11/Manual-Banda-de-Guerra1999.pdf">1999</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+            <li><section id="contact">
+                <h2>Manual 2020</h2>
+                <em><p>Mirelo Aqui<Center><a href="https://es.scribd.com/document/495846244/Manual-de-Ademanes-y-Toques-Militares-2020">2020</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+                <h2>Manual 2024</h2>
+                <em><p>Mirelo aqui<Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+                <h2>Contacto</h2>
+                <em><p>Para más información, puedes contactarnos en <Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+
+        </ul>
+    </div>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (popup.style.left === "0px") {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            } else {
+                popup.style.left = "0px";
+                toggleButton.style.display = "none";
+            }
+        }
+
+        // Función para cerrar el menú cuando se hace clic fuera de él
+        window.onclick = function(event) {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (event.target != popup && event.target != toggleButton) {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            }
+        }
+    </script>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Banda de Guerra</h1>
+    </header>
+    <nav>
+        <a href="acerca.html" class="button">Acerca de Bandas de Guerra</a>
+        <a href="notas-libres.html" class="button">Notas Libres</a>
+        <a href="toques-libres.html" class="button">Toques Libres</a>
+        <a href="Partituras.html" class="button">Partituras</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h1>¿Que puedo encontrar aqui?</h1>
+            <p><h4>En este apartado puedes encontrar en los botones que se encuentran en la parte de arriba lo siguiente:</h4></p>
+                
+            <u><h2>Acerca de bandas de guerra:</H2></u>
+
+                <p>Este apartado te enviara a otra hoja de esta app donde te dara informacion importante
+                    y vital para cualquier bandero, tales como, la historia de las bandas de guerra, El significado de su nombre, y mucha mas imformacion
+                    relebante e interesante sobre el tema.</p>
+           
+        </section>
+        <section id="events">
+            <u><h2>Notas Libres:</H2></u>
+            <ul>
+                <li>Desfile del 16 de septiembre</li>
+                <li>Ceremonia de izamiento de bandera</li>
+                <li>Concurso Nacional de Bandas de Guerra</li>
+            </ul>
+        </section>
+        <section id="members">
+            <h2>Toques Libres</h2>
+            <p>Aqui encontraras links que te llevan a video ya sea viejos o nuevos de distinctas bandas de guerra 
+            tocando algun ensamble, rutina o toques libres en general.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Daniela Giselle Garcia Gutierrez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda de Guerra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px; /* Ajusta el margen interno del botón */
+            background-color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button img {
+            display: block;
+            width: 100%; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .button p {
+            margin-top: 10px; /* Ajusta el margen superior del texto */
+            text-align: center;
+            color: #000; /* Color de texto negro */
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda de Guerra</title>
+    <style>
+        #popup {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: left 0.3s;
+            z-index: 1000;
+        }
+        #toggleButton {
+            position: fixed;
+            top: 20px; /* Ajusta la distancia desde la parte superior */
+            left: 20px; /* Ajusta la distancia desde la parte izquierda */
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Banda de Guerra</h1>
+    </header>
+    <button id="toggleButton" onclick="togglePopup()">☰</button>
+    <div id="popup">
+        <!-- Contenido del popup -->
+        <h2>Menu</h2>
+        <ul>
+                <h2>Contacto</h2>
+                <em><p>Para más información, puedes contactarnos en <Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+        </ul>
+    </div>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (popup.style.left === "0px") {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            } else {
+                popup.style.left = "0px";
+                toggleButton.style.display = "none";
+            }
+        }
+
+        // Función para cerrar el menú cuando se hace clic fuera de él
+        window.onclick = function(event) {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (event.target != popup && event.target != toggleButton) {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
+
+    </header>
+    <main>
+        <div class="button-container">
+            <a href="marchas.html" class="button">
+                <img src="marchas.jpg" alt="Marchas Militares">
+                <p>Marchas Militares</p>
+            
+            </a>
+            <a href="toques.html" class="button">
+                <img src="toques.jpeg" alt="Toques Militares">
+                <p>Toques Militares</p>
+
+            </a>
+
+            <a href="solo-cornetas.html" class="button">
+                <img src="solo-cornetas.jpg" alt="Solo Cornetas">
+                <p>Solo Cornetas</p>
+
+            <a href="solo-cajas.html" class="button">
+                <img src="solo-cajas.jpg" alt="Solo Cajas">
+                <p>Solo Cajas</p>
+
+            <a href="notas-reglamentarias.html" class="button">
+                <img src="notas-reglamentarias.jpg" alt="Notas Reglamentarias">
+                <p>Notas Reglamentarias</p>
+            </a>
+
+            </a>
+            <a href="teoria.html" class="button">
+                <img src="teoria.jpg" alt="Teoría">
+                <p>Teoría</p>
+
+                </a>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

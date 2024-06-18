@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda de Guerra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px; /* Ajusta el margen interno del botón */
+            background-color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button img {
+            display: block;
+            width: 100%; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .button p {
+            margin-top: 10px; /* Ajusta el margen superior del texto */
+            text-align: center;
+            color: #000; /* Color de texto negro */
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <style>
+        #popup {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: left 0.3s;
+            z-index: 1000;
+        }
+        #toggleButton {
+            position: fixed;
+            top: 20px; /* Ajusta la distancia desde la parte superior */
+            left: 20px; /* Ajusta la distancia desde la parte izquierda */
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" onclick="togglePopup()">☰</button>
+    <div id="popup">
+        <!-- Contenido del popup -->
+        <h2>Complementos</h2>
+        <ul>
+            <h2>Toque Individuales</h2>
+            <em><p><a href="solo-cajas.html">CAJA</a></p>
+            <em><p><a href="solo-cornetas.html">CORNETA</a></p>
+            </section></li></em>
+            <li><section id="contact">
+            
+            <li><section id="contact">
+                <h2>Manual 1999</h2>
+                <em><p>Mirelo Aqui<Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+                <h2>Manual 2024</h2>
+                <em><p>Mirelo aqui<Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+                <h2>Contacto</h2>
+                <em><p>Para más información, puedes contactarnos en <Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+
+        </ul>
+    </div>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (popup.style.left === "0px") {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            } else {
+                popup.style.left = "0px";
+                toggleButton.style.display = "none";
+            }
+        }
+
+        // Función para cerrar el menú cuando se hace clic fuera de él
+        window.onclick = function(event) {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (event.target != popup && event.target != toggleButton) {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            }
+        }
+    </script>
+    </style>
+</head>
+<body>
+</head>
+<body>
+    <header>
+        <h1>Marchas Reglamentarias</h1>
+        
+    </header>
+    <main>
+        <div class="button-container">
+            <a class="button">
+               <h3><p>1. Ciudadela</p></h3>
+                <audio controls>
+                    <source src="sonidos/Ciudadela.mpeg" type="audio/mpeg">
+                </audio>
+            
+            </a>
+            <a class="button">
+                <h3><p>2. Chaparrito Bigoton</p></h3>
+                <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+            </a>
+            
+            <a class="button">
+                <h3><p>3. Mi General</p></h3>
+                <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+            </a>
+
+            <a class="button">
+                <h3><p>4. Diablos</p></h3>
+                <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+            </a>
+
+            <a class="button">
+                <h3><p>5. Ecos de Mexico</p></h3>
+                <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+            </a>
+
+            <a class="button">
+                <h3><p>6. Defensa Nacional</p></h3>
+                <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>7. Alegres Marchando</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>8. Patria</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>9. Tierra Blanca</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>10. Dieciseis de Septiempbre</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>11. Aguilas</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>12. Guerra</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>13. Marinos</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>14. Brasil</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>15. Soberania</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>16. La Pastelera</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>17. Infanteria</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>18. Cascabel</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>19. Cuicos</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>20. Notas</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>21. Copa de Oro</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>22. Guardias</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>23. Brigada</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>24. La Coqueta</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>25. Dragona</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>26. La Raspa</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>27. Sambre-et-Meuse</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>28. Conejos</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+
+            <a class="button">
+                <h3><p>29. Kirografos</p></h3>
+                    <audio controls>
+                    <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                </audio>
+            </a>
+        </div>
+    </main>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            if (popup.style.left === "0px") {
+                popup.style.left = "-400px"; // Oculta el popup
+            } else {
+                popup.style.left = "0px"; // Muestra el popup
+            }
+        }
+    </script>
+</body>
+</html>

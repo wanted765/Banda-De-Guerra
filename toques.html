@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda de Guerra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px; /* Ajusta el margen interno del botón */
+            background-color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button img {
+            display: block;
+            width: 100%; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .button p {
+            margin-top: 10px; /* Ajusta el margen superior del texto */
+            text-align: center;
+            color: #000; /* Color de texto negro */
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <style>
+        #popup {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: left 0.3s;
+            z-index: 1000;
+        }
+        #toggleButton {
+            position: fixed;
+            top: 20px; /* Ajusta la distancia desde la parte superior */
+            left: 20px; /* Ajusta la distancia desde la parte izquierda */
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" onclick="togglePopup()">☰</button>
+    <div id="popup">
+        <!-- Contenido del popup -->
+        <h2>Complementos</h2>
+        <ul>
+            <li><section id="contact">
+            <h2>Toque Individuales</h2>
+            <em><p><a href="solo-cajas.html">CAJA</a></p>
+            <em><p><a href="solo-cornetas.html">CORNETA</a></p>
+            </section></li></em>
+            <li><section id="contact">
+            
+            <li><section id="contact">
+                <h2>Manual 1999</h2>
+                <em><p>Mirelo Aqui<Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+                <h2>Manual 2024</h2>
+                <em><p>Mirelo aqui<Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+            <li><section id="contact">
+
+                <h2>Contacto</h2>
+                <em><p>Para más información, puedes contactarnos en <Center><a href="https://www.instagram.com/gisel_s0116?utm_source=qr&igsh=MWp5amkxdDZtYjY4bw==">@Guisel_S0116</a></Center></p>
+            </section></li></em>
+
+        </ul>
+    </div>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (popup.style.left === "0px") {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            } else {
+                popup.style.left = "0px";
+                toggleButton.style.display = "none";
+            }
+        }
+
+        // Función para cerrar el menú cuando se hace clic fuera de él
+        window.onclick = function(event) {
+            var popup = document.getElementById("popup");
+            var toggleButton = document.getElementById("toggleButton");
+            if (event.target != popup && event.target != toggleButton) {
+                popup.style.left = "-400px";
+                toggleButton.style.display = "block";
+            }
+        }
+    </script>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toques Reglamentarios</h1>
+        
+    </header>
+    <main>
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .button {
+            display: block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            z-index: 1;
+        }
+
+        .audio-container {
+            margin-top: 10px;
+        }
+
+        .plus {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 1000;
+            width: 300px;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .modal p {
+            margin: 0;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .button-container {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .button {
+                display: block;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                position: relative;
+                z-index: 1;
+            }
+    
+            .audio-container {
+                margin-top: 10px;
+            }
+    
+            .plus {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+                z-index: 2;
+            }
+    
+            .modal {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                border: 1px solid #ccc;
+                padding: 20px;
+                z-index: 1000;
+                width: 300px;
+                max-width: 90%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+    
+            .modal p {
+                margin: 0;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+    
+            .modal-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+        </style>
+    </head>
+    <body>
+
+        <Center>
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Alarma: Una cadencia comúnmente utilizada entre 120 y 140 golpes por minuto, una señal militar urgente utilizada para alertar sobre emergencias como ataques, desastres naturales o evacuaciones. Su ritmo distintivo y reconocible garantiza una respuesta rápida y coordinada de las tropas, reflejando la disciplina y organización dentro de las fuerzas armadas.')">
+                <button class="plus">+</button>
+                <h3><p>1. Alarma</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/Alarma.mpeg" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Al Hombro: La cadencia suele estar alrededor de 90 golpes por minuto, sirve para ordenar a los integrantes de la formación a que lleven sus armas, en el caso de que las tengan, en posición vertical y descansando sobre el hombro derecho. Este toque suele ser parte de los comandos y señales utilizados en la banda de guerra para mantener la disciplina y ejecutar movimientos de manera coordinada durante desfiles o ceremonias militares.')">
+                <button class="plus">+</button>
+                <h3><p>2. Al hombro</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/Nom_S.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Alinearse: La cadencia  suele ser de aproximadamente 90 golpes por minuto, sirve para ordenar a los integrantes de la formación a que se ubiquen en línea recta y en posición de atención, listos para recibir instrucciones adicionales o para ejecutar movimientos coordinados durante desfiles, ceremonias militares u otras actividades de disciplina y orden.')">
+                <button class="plus">+</button>
+                <h3><p>3. Alinearse</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Alto:La cadencia generalmente de aproximadamente 60 golpes por minuto, sirve para ordenar una detención inmediata y simultánea de todos los movimientos de la formación. Este comando se utiliza para cesar cualquier actividad o movimiento en curso y para mantener la disciplina y el orden durante desfiles, prácticas o ceremonias militares.')">
+                <button class="plus">+</button>
+                <h3><p>4. Alto</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Asamblea:La cadencia es de aproximadamente 120 golpes por minuto, sirve para convocar a todos los integrantes de la formación para reunirse de manera ordenada y rápida en un lugar designado. Este comando se utiliza en situaciones de emergencia, para comunicar información importante o para realizar una instrucción general a todos los miembros de la banda de guerra. Su propósito es reunir rápidamente a la unidad y garantizar una respuesta coordinada ante la situación.')">
+                <button class="plus">+</button>
+                <h3><p>5. Asamblea</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>    
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Ataque:La cadencia suele ser más rápida e intensa, generalmente alrededor de 140 a 160 golpes por minuto, sirve para ordenar a los integrantes de la formación que se preparen para ejecutar un movimiento o acción ofensiva. Este comando se utiliza en situaciones donde se requiere avanzar hacia un objetivo determinado de manera coordinada y enérgica, como parte de prácticas militares, desfiles o representaciones ceremoniales. El objetivo del -Ataque- es mantener la disciplina y la eficacia en la ejecución de los movimientos tácticos dentro de la formación.')">
+                <button class="plus">+</button>
+                <h3><p>6. Ataque</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Atencio: Sirve para ordenar a los integrantes de la formación que adopten una posición de alerta y máxima concentración. Este comando se utiliza para preparar a los miembros para recibir órdenes o instrucciones adicionales, iniciar movimientos específicos, o para mantener la disciplina y el orden durante desfiles, ceremonias militares u otras actividades donde se requiera una respuesta rápida y coordinada por parte de la formación.')">
+                <button class="plus">+</button>
+                <h3><p>7. Atencion</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Aumentar al Frente:La cadencia generalmente es rápida, entre 120 y 140 golpes por minuto, sirve para ordenar a los integrantes de la formación que incrementen la distancia entre ellos y el frente de la formación. Este comando se utiliza para ajustar la disposición y el espacio entre los miembros de la banda de guerra, ya sea para expandir la formación, mantener una distancia apropiada entre filas o para cualquier otro propósito táctico durante desfiles, ceremonias militares u otras actividades donde se requiera un ajuste en la posición de la formación.')">
+                <button class="plus">+</button>
+                <h3><p>8. Aumentar al Frente</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Bandera:La cadencia suele ser de 60 a 80 golpes por minutosuele ser de 60 a 80 golpes por minuto, sirve para ordenar a los integrantes de la formación que presten atención a la bandera nacional o a otro emblema representativo. Este comando se utiliza para honrar y rendir respeto a los símbolos patrios, ya sea durante el izado o arriado de la bandera, en desfiles cívicos o militares, o en otras ceremonias donde se requiera mostrar el respeto y la reverencia adecuados hacia los símbolos nacionales.')">
+                <button class="plus">+</button>
+                <h3><p>9. Bandera</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Bando: La cadencia suele ser de 60 a 80 golpes por minuto para asegurar su claridad y reconocimiento, sirve para transmitir órdenes o mensajes importantes a los integrantes de la formación. Este comando puede ser utilizado para comunicar instrucciones específicas, anunciar cambios en la planificación de actividades, o para cualquier otra comunicación relevante que deba ser transmitida de manera clara y precisa a todos los miembros de la banda de guerra durante desfiles, ceremonias militares u otras actividades similares.')">
+                <button class="plus">+</button>
+                <h3><p>10. Bando</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Batallon: La cadencia suele ser de 60 pasos por minuto, sirve para ordenar a los integrantes de la formación que adopten una disposición o formación específica que imita la organización y estructura de un batallón militar. Este comando puede ser parte de prácticas militares, desfiles o representaciones ceremoniales donde se simula la organización y disciplina de una unidad militar más grande, como un batallón. El propósito del -Batallón- es mantener la disciplina y el orden dentro de la formación y representar de manera adecuada la estructura militar durante eventos formales.')">
+                <button class="plus">+</button>
+                <h3><p>11. Batallon</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Calar: La cadencia suele ser de 80 golpes por minuto, sirve para ordenar a los integrantes de la formación que bajen sus armas o instrumentos musicales hacia el suelo en posición vertical. Este comando puede ser parte de la disciplina militar durante desfiles, ceremonias u otras actividades donde se requiera mostrar respeto o prepararse para una instrucción adicional. El propósito del -Calar- es mantener la uniformidad y el orden dentro de la formación mientras se ejecuta el movimiento específico.')">
+                <button class="plus">+</button>
+                <h3><p>12. Calar</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Cambiar de Hombro: La cadencia suele ser de 140 golpes por minuto, sirve  para ordenar a los integrantes de la formación que cambien la posición de descanso de sus armas o instrumentos musicales del hombro derecho al hombro izquierdo, o viceversa. Este comando puede ser parte de las prácticas de disciplina y precisión durante desfiles, ceremonias o ejercicios militares, y tiene como objetivo mantener la uniformidad y coordinación dentro de la formación.')">
+                <button class="plus">+</button>
+                <h3><p>13. Cambiar de Hombro</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Cesar el Fuego: La cadencia suele ser de 60 golpes por minuto, sirve para ordenar a los integrantes de la formación que suspendan o detengan cualquier actividad o movimiento en curso. Este comando se utiliza comúnmente durante prácticas militares, desfiles o ceremonias para indicar una pausa en las acciones o para prepararse para recibir órdenes adicionales. El propósito del -Cesár el Fuego- es mantener la disciplina y el orden dentro de la formación mientras se espera nueva instrucción.')">
+                <button class="plus">+</button>
+                <h3><p>14. Cesár el Fuego</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Columnas: La cadencia suele ser de 120 golpes por minuto, sirve para ordenar a los integrantes de la formación que se organicen en una línea recta y estrecha, similar a una columna, generalmente en un solo archivo o en formación estrecha. Este comando puede ser parte de prácticas militares, desfiles o ejercicios tácticos donde se requiera una formación más compacta y móvil. El propósito de la -Columna- es facilitar la movilidad y la coordinación de la formación en situaciones donde se necesite avanzar o maniobrar en espacios reducidos.')">
+                <button class="plus">+</button>
+                <h3><p>15. Columna</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Compañías: La cadencia es de 100 golpes por minuto, usado para organizar a la formación en grupos más pequeños llamados compañías, facilitando la coordinación en operaciones tácticas y desfiles.')">
+                <button class="plus">+</button>
+                <h3><p>16. Compañias</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Derecha: La cadencia es de 120 golpes por minuto, usado para girar a la formación hacia la derecha de manera coordinada durante desfiles y maniobras militares.')">
+                <button class="plus">+</button>
+                <h3><p>17. Derecha</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Descansar: Se utiliza para ordenar a los integrantes de la formación que descansen, suspendan temporalmente las actividades o permanezcan en reposo. Es un comando fundamental para permitir que los miembros recuperen energías durante entrenamientos prolongados, desfiles o ejercicios militares, asegurando la efectividad y el bienestar del grupo.')">
+                <button class="plus">+</button>
+                <h3><p>18. Descansar</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Disminuir el Frente: Este comando se utiliza para ordenar a los integrantes de la formación que reduzcan el espacio entre ellos, formando una línea más compacta y reducida en tamaño. Es esencial durante desfiles, ejercicios tácticos y operaciones militares donde se requiere ajustar la formación para adaptarse a espacios más estrechos o para fines tácticos específicos, manteniendo la cohesión y la eficiencia del grupo en movimiento.')">
+                <button class="plus">+</button>
+                <h3><p>19. Disminuír el Frente</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Embrazar: Se utiliza para ordenar a los integrantes de la formación que coloquen sus armas en posición de descanso sobre el hombro, listos para reposo o para desplazamientos donde se requiera mayor libertad de movimiento. Este comando es esencial durante momentos de pausa en actividades militares, desfiles o ejercicios tácticos, permitiendo a los soldados mantener la seguridad de sus armas mientras descansan o se desplazan en formación.')">
+                <button class="plus">+</button>
+                <h3><p>20. Embrazar</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('En Descanso: Este comando se utiliza para ordenar a los integrantes de la formación que relajen sus posturas y permanezcan en reposo temporalmente, manteniendo una posición informal pero alerta. Es esencial durante períodos de descanso durante entrenamientos prolongados, desfiles o actividades militares, permitiendo a los soldados recuperar energías mientras permanecen listos para recibir órdenes adicionales o reanudar la actividad rápidamente.')">
+                <button class="plus">+</button>
+                <h3><p>21. En descanso</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('En Guardia: Este comando se utiliza para ordenar a los integrantes de la formación que adopten una postura de alerta y preparación, listos para responder rápidamente a cualquier amenaza o situación que requiera acción inmediata. Es esencial durante períodos de vigilancia, patrullaje o en situaciones donde se espera un posible contacto con el enemigo, asegurando que los soldados estén preparados para defenderse o ejecutar órdenes tácticas sin demora.En Guardia: Este comando se utiliza para ordenar a los integrantes de la formación que adopten una postura de alerta y preparación, listos para responder rápidamente a cualquier amenaza o situación que requiera acción inmediata. Es esencial durante períodos de vigilancia, patrullaje o en situaciones donde se espera un posible contacto con el enemigo, asegurando que los soldados estén preparados para defenderse o ejecutar órdenes tácticas sin demora.')">
+                <button class="plus">+</button>
+                <h3><p>22. En guardia</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Entrada de Banda: Este comando se utiliza para ordenar a la banda de guerra que entre o se presente en un lugar específico, generalmente en ceremonias, desfiles u otros eventos formales donde la banda es parte integral. Es esencial para coordinar la aparición sincronizada de la banda, asegurando que su entrada sea impactante y esté alineada con el protocolo establecido para el evento.')">
+                <button class="plus">+</button>
+                <h3><p>23. Entrada de banda</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Envainar: Es un comando de acción, Ordena a los integrantes de la formación que realicen una tarea o trabajo específico, generalmente relacionado con labores administrativas o de mantenimiento dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>24. Envainar</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Fajina: Es un comando de acción, Ordena a los integrantes de la formación que realicen una tarea o trabajo específico, generalmente relacionado con labores administrativas o de mantenimiento dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>25. Fajina</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Firmes: Es un estado de postura, Ordena a los integrantes de la formación que adopten una posición de atención y rigidez, manteniendo una postura uniforme y alineada.')">
+                <button class="plus">+</button>
+                <h3><p>26. Firmes</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Flancos: Es un comando de formación, Ordena a los integrantes de la formación que se desplieguen hacia los lados para ampliar el frente o la cobertura de la unidad, esencial durante despliegues tácticos o en situaciones donde se requiere una mayor extensión lateral.')">
+                <button class="plus">+</button>
+                <h3><p>27. Flancos</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Formar la valla: Es un comando de acción, Ordena a los integrantes de la formación que se posicionen en línea para formar una barrera o valla física, utilizada para proteger o delimitar áreas durante operaciones militares o eventos específicos.')">
+                <button class="plus">+</button>
+                <h3><p>28. Formar la valla</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Fuego: Es un comando de acción inmediata, Ordena a los integrantes de la formación que abran fuego, iniciando el disparo de armas de fuego en respuesta a una situación táctica o de combate.')">
+                <button class="plus">+</button>
+                <h3><p>29. Fuego</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Hospital o Visita de Medico: Es un comando para atención médica, Ordena a los integrantes de la formación que se preparen para recibir atención médica o para dirigirse al hospital, indicando una situación donde se requiere asistencia médica inmediata.')">
+                <button class="plus">+</button>
+                <h3><p>30. Hospital o Visita de Medico</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Infanteria: Ordena a los integrantes de la formación que se organicen y marchen como infantería, listos para movimientos tácticos o despliegues en terreno.')">
+                <button class="plus">+</button>
+                <h3><p>31. Infanteria</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Instruccion: La cadensia se adaptada al tipo de instrucción, Ordena a los integrantes de la formación que se preparen para recibir instrucción o entrenamiento específico, asegurando que todos estén listos para aprender o practicar habilidades militares o procedimientos tácticos.')">
+                <button class="plus">+</button>
+                <h3><p>32. Instruccion</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Intruccion de Diana y Diana: Es un comando para una actividad específica, Ordena a los integrantes de la formación que se preparen para realizar prácticas de tiro o ejercicios de puntería, fundamental para el entrenamiento en el uso preciso de armas y habilidades de combate.')">
+                <button class="plus">+</button>
+                <h3><p>33. Intruccion de Diana y Diana</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Izquierda: Es un comando de dirección, Ordena a los integrantes de la formación que giren o se desplacen hacia la izquierda, manteniendo la alineación y el ritmo establecido durante desfiles, ejercicios tácticos y operaciones militares.')">
+                <button class="plus">+</button>
+                <h3><p>34. Izquierda</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Levante: Es un comando de acción inmediata, Ordena a los integrantes de la formación que levanten o eleven algo específico, como banderas, armas u objetos requeridos para una actividad o ceremonia militar.Ordena a los integrantes de la formación que levanten o eleven algo específico, como banderas, armas u objetos requeridos para una actividad o ceremonia militar.')">
+                <button class="plus">+</button>
+                <h3><p>35.Levante</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Linea: Es un comando de formación, Ordena a los integrantes de la formación que se alineen en una línea recta y uniforme, esencial durante desfiles, inspecciones u operaciones donde se requiere una disposición ordenada y precisa.')">
+                <button class="plus">+</button>
+                <h3><p>36. Linea</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Lista: Es un comando de estado o preparación, Ordena a los integrantes de la formación que estén preparados o en estado de alerta para recibir órdenes adicionales o para iniciar una actividad específica dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>37. Lista </p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Lamada de arrestado: Es un comando de acción inmediata, Ordena a los integrantes de la formación que se preparen para recibir a un individuo bajo arresto, asegurando una respuesta rápida y ordenada para mantener la disciplina y el control dentro del grupo militar.')">
+                <button class="plus">+</button>
+                <h3><p>38. Lamada de arrestado</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Banda: La cadencia varía, depende del ritmo musical, Ordena a la banda de guerra que se prepare para tocar o actuar en un evento específico, asegurando que estén listos para comenzar su presentación o participación musical en sincronización con el protocolo establecido.')">
+                <button class="plus">+</button>
+                <h3><p>39. Llamada de Banda</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de choferes: Es un comando de preparación, Ordena a los choferes dentro de la formación que se preparen para llevar a cabo sus tareas asignadas, asegurando que estén listos para operar vehículos o transportar personal de manera eficiente y coordinada dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>40. Llamada de choferes</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Clases: Es un comando de organización, Ordena a los integrantes de la formación que se organicen en grupos o clases específicas para recibir instrucción o capacitación en áreas particulares dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>41. Llamada de Clases</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de comandantes: Es un comando de reunión, Ordena a los comandantes o líderes dentro de la formación que se reúnan para recibir instrucciones, discutir estrategias o coordinar operaciones dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>42. Llamada de comandantes</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Especialistas: Es un comando de reunión, Ordena a los especialistas dentro de la formación que se reúnan para discutir temas específicos, resolver problemas técnicos o coordinar acciones especializadas dentro del contexto militar o de otra organización.')">
+                <button class="plus">+</button>
+                <h3><p>43. Llamada de Especialistas</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Honor: Es un comando ceremonial, Ordena a los integrantes de la formación que se preparen para rendir homenaje o mostrar respeto durante una ceremonia o evento especial, garantizando que todos estén listos para participar de manera solemne y coordinada.')">
+                <button class="plus">+</button>
+                <h3><p>44. Llamada de Honor</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Músicos: La cadencia varia depende del ritmo musical requerido, Ordena a los músicos dentro de la formación que se preparen para tocar o ejecutar música en un evento específico, asegurando que estén listos para contribuir con la parte musical de manera sincronizada y profesional.')">
+                <button class="plus">+</button>
+                <h3><p>45. Llamada de Músicos</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Oficiales: Es un comando de reunión, Ordena a los oficiales dentro de la formación que se reúnan para recibir instrucciones, coordinar operaciones o discutir asuntos estratégicos dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>46. Llamada de Oficiales</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de Tropa: Es un comando de reunión, Ordena a los soldados y miembros de la tropa dentro de la formación que se reúnan para recibir instrucciones, coordinar actividades o discutir temas relacionados con sus funciones dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>47. Llamada de Tropa</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada de academias: Es un comando de reunión, Ordena a los académicos o estudiantes dentro de la formación que se reúnan para recibir instrucción académica, discutir temas educativos o participar en actividades relacionadas con el aprendizaje y desarrollo profesional dentro del contexto militar o educativo.')">
+                <button class="plus">+</button>
+                <h3><p>48. Llamada de academias</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Llamada para el Servicio de Dia: Es un comando para una tarea específica, Ordena a los integrantes de la formación que se preparen para asumir sus roles en el servicio de guardia diurna, asegurando que estén listos para cumplir con sus responsabilidades de vigilancia y seguridad dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>49. Llamada para el Servicio de Dia</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Material a Tierra: Es un comando de acción inmediata, Ordena a los integrantes de la formación que coloquen cualquier equipo o material en el suelo de manera segura y ordenada, indicando una situación donde se requiere descanso o preparación para otras actividades dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>51. Material a Tierra</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Media Vuelta: Es un comando de acción, Ordena a los integrantes de la formación que realicen una media vuelta, girando 180 grados para cambiar de dirección de manera rápida y coordinada durante desfiles, ejercicios tácticos u operaciones militares.')">
+                <button class="plus">+</button>
+                <h3><p>52. Media Vuelta</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Negación: ')">
+                <button class="plus">+</button>
+                <h3><p>53. Negación </p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Orden: Es un comando de ejecución inmediata, Ordena a los integrantes de la formación que ejecuten una acción específica de manera rápida y sin demora, siguiendo las instrucciones dadas por el líder o comandante.')">
+                <button class="plus">+</button>
+                <h3><p>54. Orden</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Parte: Es un comando de acción inmediata, Ordena a los integrantes de la formación que se separen o dividan en grupos específicos para realizar tareas asignadas dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>55. Parte</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Paso Redoblado: Cadencia de 120 pasos por minuto, Ordena a los integrantes de la formación que marchen a un ritmo acelerado y sincronizado, utilizado en desplazamientos rápidos o para aumentar la velocidad durante desfiles militares y ejercicios tácticos.')">
+                <button class="plus">+</button>
+                <h3><p>57. Paso Redoblado</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Paso Veloz: Cadencia de 175 pasos por minuto, Ordena a los integrantes de la formación que marchen a un ritmo acelerado pero controlado, utilizado para desplazamientos rápidos durante operaciones tácticas o desfiles militares donde se requiere moverse con rapidez y eficiencia.')">
+                <button class="plus">+</button>
+                <h3><p>58. Paso Veloz</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Pelotones: La cadencia varia, adaptada al ritmo de marcha, Ordena a los integrantes de la formación que se organicen en grupos más pequeños llamados pelotones, facilitando la coordinación y el manejo efectivo de unidades durante operaciones militares, desfiles o ejercicios tácticos.')">
+                <button class="plus">+</button>
+                <h3><p>59. Pelotones</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Presentar: Es un comando de acción inmediata, Ordena a los integrantes de la formación que realicen una presentación formal o un saludo ante una autoridad o durante una ceremonia, mostrando respeto y disciplina dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>60. Presentar</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Rancho: Es un comando para el almuerzo o comida, Ordena a los integrantes de la formación que se dirijan al lugar designado para tomar su comida, garantizando que el personal reciba su alimentación de manera organizada y eficiente dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>61. Rancho</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Reunión: Es un comando para la organización, Ordena a los integrantes de la formación que se reúnan para discutir temas específicos, recibir instrucciones o coordinar actividades dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>62. Reunión</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Romper la Formación: Es un comando de acción inmediata, Ordena a los integrantes de la formación que se dispersen o salgan de la alineación establecida, generalmente al finalizar una actividad o entrenamiento, permitiendo que los individuos se muevan libremente.')">
+                <button class="plus">+</button>
+                <h3><p>63. Romper la Formación </p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Secciones: Ordena a los integrantes de la formación que se organicen en grupos más pequeños llamados secciones, facilitando la administración y la coordinación efectiva durante operaciones militares, desfiles o ejercicios tácticos.')">
+                <button class="plus">+</button>
+                <h3><p>64. Secciones</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Silencio: Es un comando de estado, Ordena a los integrantes de la formación que guarden silencio completo, esencial durante ceremonias, operaciones tácticas o situaciones donde se requiere concentración y atención máxima.')">
+                <button class="plus">+</button>
+                <h3><p>65. Silencio</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Suspender: Es un comando de acción inmediata, Ordena a los integrantes de la formación que cesen temporalmente una actividad o tarea específica, indicando la interrupción momentánea de una acción dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>66. Suspender</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Tomar el Material: Es un comando de acción inmediata, Ordena a los integrantes de la formación que recojan o tomen el equipo o material asignado, preparándose para su uso o transporte dentro del contexto militar.')">
+                <button class="plus">+</button>
+                <h3><p>67. Tomar el Material</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+
+        <div class="button-container">
+            <a class="button" onclick="toggleModal('Tres de Diana: La cadencia es de 60 golpes po minuto,  Ordena a los integrantes de la formación que realicen tres salvas o tiros de saludo como parte de un protocolo ceremonial, utilizado para rendir honores o marcar eventos especiales dentro del contexto militar')">
+                <button class="plus">+</button>
+                <h3><p>68. Tres de Diana</p></h3>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="sonidos/pato.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+        </a>
+    </Center>
+        </div>
+    
+        <div class="modal-overlay" id="modal-overlay" onclick="toggleModal('')"></div>
+        <div class="modal" id="modal">
+            <p id="modal-content">Texto predeterminado no editable</p>
+        </div>
+    
+        <script>
+            function toggleModal(text) {
+                var modal = document.getElementById('modal');
+                var overlay = document.getElementById('modal-overlay');
+                var modalContent = document.getElementById('modal-content');
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    overlay.style.display = 'none';
+                } else {
+                    modalContent.innerText = text;
+                    modal.style.display = 'block';
+                    overlay.style.display = 'block';
+                }
+            }
+    
+            window.onclick = function(event) {
+                var modal = document.getElementById('modal');
+                var overlay = document.getElementById('modal-overlay');
+                if (event.target === overlay) {
+                    modal.style.display = 'none';
+                    overlay.style.display = 'none';
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
+    
+        </div>
+    </main>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            if (popup.style.left === "0px") {
+                popup.style.left = "-400px"; // Oculta el popup
+            } else {
+                popup.style.left = "0px"; // Muestra el popup
+            }
+        }
+    </script>
+</body>
+</html>
